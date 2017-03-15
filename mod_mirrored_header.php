@@ -84,7 +84,7 @@ $doc->addStyleDeclaration( $style );
 				<div class="cover-teaser-group-grid">
 					<div class="cover-teaser-header-images ">
 						<div class="header-images-bottom">
-							<div id="header-image" class="header-image " style="height:<?php echo $bgheight ?>;"><div class="usp"><?php echo $usp ?></div><?php if($scrolldown == 1) { ?><div class="anker-header"><a href="#mirankor"><img alt="arrowdown" src="/modules/mod_mirrored_header/images/arrowdown.png"></a></div><?php }; ?></div>
+							<div id="header-image" class="header-image " style="height:<?php echo $bgheight ?>;"><div class="usp"><?php echo $usp ?></div><?php if($scrolldown == 1) { ?><div class="anker-header"><a href="#mirankor"><style>.anker-header a {cursor: url('/modules/mod_mirrored_header/images/cursordown.png'), auto;} </style><img alt="arrowdown" src="/modules/mod_mirrored_header/images/arrowdown.png"></a></div><?php }; ?></div>
                             <div class="header-image reflect right " style="height:<?php echo $bgheight ?>;" ></div>
 							<div class="header-image reflect left " style="height:<?php echo $bgheight ?>;"></div>
 
@@ -98,9 +98,6 @@ $doc->addStyleDeclaration( $style );
 				<div class="ankor-mirror-header"><a name="mirankor" id="mirankor">&nbsp;</a> </div>
 			</section>
 		</div>
-
-
-
 <?php if($options == 3) { ?>
 	<link rel="stylesheet" type="text/css" href="/modules/mod_mirrored_header/css/fullscreen.css">
 	<script type="text/javascript">//<![CDATA[
