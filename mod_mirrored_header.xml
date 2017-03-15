@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="0.1" type="module" client="site" method="upgrade">
+	<name>Mirrored Header</name> 
+    <version>1.7</version>
+    <creationDate>september, 2015</creationDate>
+    <author>Stip webdesign</author>
+    <authorEmail>web@stip.nl</authorEmail>
+    <authorUrl>http://stip.nl</authorUrl>
+    <copyright>Copyright 2015 - Stip</copyright>
+    <license>GNU/GPL</license>
+	<description>
+	</description>
+
+	<files>
+		<filename module="mod_mirrored_header">mod_mirrored_header.php</filename>
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>php</folder>
+		
+	</files>
+
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_mirrored_header/php">
+		      <fieldset name="basic">
+				  <field name="bgImage" label="Background Image" type="media"  description="Choose an image." />
+				  <field
+				    name="options"
+				    type="radio"
+				    class="btn-group "
+				    default="1"
+				    label="Options"
+				    description="Image options, fullscreen overwrites Height">
+				    <option value="1">Mirror</option>
+				    <option value="0">Normal</option>
+                    <option value="2">Fullwidth</option>
+                    <option value="3">Fullscreen</option>
+                  </field>
+                  <field
+				name="bgheight"
+				type="text"
+				default="272px"
+				label="height"
+				description="height, overwritten by fullscreen option" />
+				  <field
+						  name="headerheight"
+						  type="text"
+						  default=""
+						  label="Fullwidth min header height"
+						  description="Duid de hoogte aan in px (geen px toevoegen)" />
+				  <field
+				name="bgposition"
+				type="text"
+				default="center"
+				label="Image alignment"
+				description="Input desired image alignment" />
+				 <field type="asset" />
+
+                  <field
+				name="usp"
+				type="textarea"
+				default=""
+				label="USP's"
+				description="Input unique selling points"
+                         filter="raw"
+                         />
+				  <field
+						  name="scrolldown"
+						  type="radio"
+						  class="btn-group "
+						  default="2"
+						  label="Scroll down icoon"
+						  description="Scroll naar beneden icoon">
+					  <option value="1">ja</option>
+					  <option value="0">Nee</option>
+				  </field>
+
+				  <field
+						  name="scrolldowntime"
+						  type="radio"
+						  class="btn-group "
+						  default="0"
+						  label="Scroll down na tijd"
+						  description="Scroll naar beneden na x aantal secondes">
+					  <option value="1">yes</option>
+					  <option value="0">no</option>
+				  </field>
+				  <field
+						  name="scrolltijd"
+						  type="text"
+						  default=""
+						  label="na hoeveel tijd scrollen"
+						  description="Na hoeveel tijd scrollen?" />
+                  
+                  
+            </fieldset>
+            
+            <fieldset name="advanced">
+			<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" /> 
+                </fieldset>
+	   </fields>
+	</config>
+    <updateservers>
+        <server type="extension" priority="1" name="mirrored header" >http://extensions.stip.nl/updates/mirror_update.xml</server>
+    </updateservers>
+</extension>
